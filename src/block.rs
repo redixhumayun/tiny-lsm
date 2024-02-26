@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 /// The block that is written to a file
 /// -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 /// |           Header(8 bytes)                   |   Data Section (var length)   |               Index               |                 Footer (8 bytes)            |
