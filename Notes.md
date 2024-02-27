@@ -63,3 +63,7 @@ The two classic choices are -> SSD and HDD. SSD is able to do random reads and w
 SSD cells have a [limited number of writes per cell](https://superuser.com/questions/1107320/why-do-ssd-sectors-have-limited-write-endurance) and the cost per GB of storage is higher.
 
 Given the write optimised nature of LSM-trees and the need to read from multiple files ([I'm unsure if HDD's can perform parallel I/O](https://pkolaczk.github.io/disk-parallelism/), probably not?) to perform compaction, SSD's would be a better option. Another reason could be that after repeated compactions there is a chance the SST files could be fragmented and the sequential read nature of SST's could devolve into more random I/O which would benefit more from SSD's.
+
+### Additional Note
+
+[I like Justin Jaffrey's idea](https://buttondown.email/jaffray/archive/the-three-places-for-data-in-an-lsm/) of breaking down the LSM into its component parts and analysing the performance of each.
